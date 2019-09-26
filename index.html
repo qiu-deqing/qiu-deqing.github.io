@@ -1,22 +1,29 @@
 ---
-title: 记事本
 layout: default
+title: 文章分类
+
 ---
 
 <div class="content">
+
   <div class="main">
+
+    {% include category.html %}
+
+
+    <div class="article">
+      <h2>文章</h2>
+      <ol class="article-list">
+        {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+
+
+  </div>
+
+  <div class="sidebar">
+
   </div>
 </div>
-
-<script src="//cdn.bootcss.com/d3/3.3.13/d3.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      d3.json("/assets/data/qiudeqing.json", function (data) {
-        var resume = dome.resume(".main", data, {
-          width: 645,
-          height: 500
-        });
-        resume.forcelayout();
-      });
-  }, false);
-</script>
