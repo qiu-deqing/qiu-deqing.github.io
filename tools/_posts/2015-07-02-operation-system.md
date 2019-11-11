@@ -8,6 +8,15 @@ title: 操作系统常见操作
 ipconfig getifaddr en0
 ```
 
+# mac微信多开
+
+```
+open -n /Applications/WeChat.app/Contents/MacOS/WeChat
+```
+
+
+
+
 # msdn我告诉你
 
 [http://msdn.itellyou.cn/][6]下载各种资源, 如纯净版windows操作系统
@@ -191,7 +200,7 @@ manico
 
 sizeup
 
-视频格式转换工具: 
+视频格式转换工具:
 
 - wondershare video converter(收费)
 - handBrake(免费)
