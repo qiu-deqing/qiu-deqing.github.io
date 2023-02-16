@@ -1,0 +1,44 @@
+
+
+<!-- <footer>
+  <ul class="page-nav">
+
+    <li class="stackoverflow">
+      <a href="http://stackoverflow.com/users/3004355/qiu-deqing">
+        <img src="http://stackoverflow.com/users/flair/3004355.png" width="208" height="58" alt="profile for qiu-deqing at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for qiu-deqing at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+      </a>
+    </li>
+  </ul>
+</footer> -->
+
+
+
+<div class="page-scroll-container"></div>
+
+<script src="/assets/js/dome.js"></script>
+<script>
+  (function (w) {
+    var doc = w.document;
+
+
+    // 类别导航高亮
+    var list = doc.querySelectorAll('.page-nav a');
+
+    // 获取当前页面第一个/和第二个/之间的内容(类别)
+    var pageCategory = location.pathname.split('/')[1];
+
+    [].forEach.call(list, function (navItem) {
+
+      // 获取每个导航链接的类别,与当前页面类别比较,确定是否高亮
+      var navCategory = navItem.pathname.split('/')[1];
+      if (navCategory === pageCategory) {
+        navItem.parentNode.classList.add('active');
+      }
+    });
+
+    // 页面导航
+    pageScroll.init({
+      container: '.page-scroll-container'
+    });
+  }(window));
+</script>

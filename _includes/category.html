@@ -1,0 +1,10 @@
+
+    <div class="category">
+      <h2>类别</h2>
+      <ol class="category-list">
+        <li><a href="/article.html">全部类别</a></li>
+        {% for c in site.categories %}
+        <li><a href="/{{ c | first}}/index.html">{{ c | first }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>

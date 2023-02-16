@@ -1,0 +1,13 @@
+
+url: http://qiudeqing.com
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "blog"
+
+## markdown解析器支持Github Flavored Markdown
+kramdown:
+  input: GFM
