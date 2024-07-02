@@ -1,0 +1,27 @@
+---
+layout: default
+title: 通用
+
+---
+
+<div class="content">
+
+  <div class="main">
+
+    {% include category.html %}
+
+    <div class="article">
+      <h2>文章</h2>
+      <ol class="article-list">
+        {% for post in site.categories.general %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+
+  </div>
+</div>
